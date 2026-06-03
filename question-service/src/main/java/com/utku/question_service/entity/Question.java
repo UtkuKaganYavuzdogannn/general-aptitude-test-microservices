@@ -1,7 +1,6 @@
 package com.utku.question_service.entity;
 
 import jakarta.persistence.*;
-import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -20,6 +19,7 @@ public class Question {
     private String content;
 
     @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
     private Difficulty diffLevel;
 
     @OneToMany
